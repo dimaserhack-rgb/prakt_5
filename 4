@@ -1,0 +1,14 @@
+pram_shirina, pram_visota = map(float, input("Введите ширину и высоту сторон прямоугольника в сантиметрах:").split())
+# Расчёт прямоугольника
+def calculate_rectangle_area(pram_shirina, pram_visota): # tumage
+    S_pram = pram_shirina * pram_visota
+    return S_pram
+print(f'S прямоугольника: {calculate_rectangle_area(pram_shirina, pram_visota):.2f}')
+
+radius = float(input("Введите радиус круга в сантиметрах:"))
+PI = 3.14
+# Расчёт S круга
+def calculate_circle_area(): # tumage
+    S_krug = PI * (radius ** 2)
+    return S_krug
+print(f'S круга: {calculate_circle_area():.2f}')
