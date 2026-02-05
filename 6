@@ -1,0 +1,17 @@
+import math
+def calculate_distance(x1, y1, x2, y2): #tumage
+    distance = math.sqrt((x2-x1)**2 + (y2-y1)**2)
+    return distance
+
+x1, y1 = map(float, input("Введите координаты первой точки (x1 y1):").split())
+x2, y2 = map(float, input("Введите координаты второй точки (x2 y2):").split())
+x3, y3 = map(float, input("Введите координаты третьей точки (x3 y3):").split())
+ras1 = calculate_distance(x1, y1, x2, y2)
+ras2 = calculate_distance(x2, y2, x3, y3)
+ras3 = calculate_distance(x3, y3, x1, y1)
+
+def calculate_triangle_area(ras1, ras2, ras3):
+    area = (ras1 + ras2 + ras3) / 2
+    return area
+
+print(f"Площадь треугольника: {calculate_triangle_area(ras1, ras2, ras3):.2f}")
