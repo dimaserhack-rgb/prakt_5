@@ -1,0 +1,13 @@
+TAX_RATE = 0.13
+CURRENCY = 'руб.'
+
+income = float(input("Введите годовой доход: "))
+tax = income * TAX_RATE
+net_income = income - tax
+
+def format_money(amount):
+    return f"{amount:,.2f}" + f" {CURRENCY}"
+
+print(f"Общая сумма дохода: {format_money(income)}")
+print(f"Сумма рассчитанного налога: {format_money(tax)}")
+print(f"Сумма на руки: {format_money(net_income)}")
