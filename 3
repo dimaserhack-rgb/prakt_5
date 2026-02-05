@@ -1,0 +1,8 @@
+amount_usd = float(input("Bведите колличество долларов:"))
+USD_TO_RUB = 93.50
+
+def convert_usd_to_rub(amount_usd): #tumage
+    rub = USD_TO_RUB * amount_usd
+    return rub
+
+print(f"Ваши баксы в рублях: {convert_usd_to_rub(amount_usd):.2f}")
